@@ -36,7 +36,7 @@ jobs:
 
       - name: Build with Maven
         working-directory: ./java-application
-        run: mvn clean install -DskipTests
+        run: mvn clean package -DskipTests
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3

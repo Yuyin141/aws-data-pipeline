@@ -61,7 +61,7 @@ jobs:
 
       - name: Build with Maven
         working-directory: ./java-application
-        run: mvn clean verify -DskipTests
+        run: mvn clean package -DskipTests
 
   security-scan:
     runs-on: ubuntu-latest
