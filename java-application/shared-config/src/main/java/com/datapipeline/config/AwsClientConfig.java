@@ -5,6 +5,7 @@ import software.amazon.awssdk.core.retry.RetryPolicy;
 import software.amazon.awssdk.http.apache.ApacheHttpClient;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.rds.RdsUtilities;
+import software.amazon.awssdk.services.s3.S3AsyncClient;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.sns.SnsClient;
 import software.amazon.awssdk.services.sqs.SqsClient;
@@ -15,6 +16,7 @@ import java.time.Duration;
 public class AwsClientConfig {
 
     private static volatile S3Client s3Client;
+    private static volatile S3AsyncClient s3AsyncClient;
     private static volatile S3TransferManager transferManager;
     private static volatile SnsClient snsClient;
     private static volatile SqsClient sqsClient;
@@ -43,12 +45,26 @@ public class AwsClientConfig {
         return s3Client;
     }
 
+    public static S3AsyncClient getS3AsyncClient() {
+        if (s3AsyncClient == null) {
+            synchronized (AwsClientConfig.class) {
+                if (s3AsyncClient == null) {
+                    s3AsyncClient = S3AsyncClient.builder()
+                            .region(AWS_REGION)
+                            .credentialsProvider(DefaultCredentialsProvider.create())
+                            .build();
+                }
+            }
+        }
+        return s3AsyncClient;
+    }
+
     public static S3TransferManager getTransferManager() {
         if (transferManager == null) {
             synchronized (AwsClientConfig.class) {
                 if (transferManager == null) {
                     transferManager = S3TransferManager.builder()
-                            .s3Client(getS3Client())
+                            .s3Client(getS3AsyncClient())
                             .build();
                 }
             }
@@ -114,6 +130,9 @@ public class AwsClientConfig {
     public static void closeAll() {
         if (s3Client != null) {
             s3Client.close();
+        }
+        if (s3AsyncClient != null) {
+            s3AsyncClient.close();
         }
         if (transferManager != null) {
             transferManager.close();
