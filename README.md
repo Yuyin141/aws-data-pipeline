@@ -5,11 +5,11 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=serhatsoysal_aws-data-pipeline&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=serhatsoysal_aws-data-pipeline)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=serhatsoysal_aws-data-pipeline&metric=coverage)](https://sonarcloud.io/summary/new_code?id=serhatsoysal_aws-data-pipeline)
 [![codecov](https://codecov.io/gh/serhatsoysal/aws-data-pipeline/branch/master/graph/badge.svg)](https://codecov.io/gh/serhatsoysal/aws-data-pipeline)
-![Java](https://img.shields.io/badge/Java-17-orange.svg)
+![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.1-brightgreen.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A production-ready, enterprise-grade data processing pipeline demonstrating professional AWS architecture with Java 17, Spring Boot 3, and Terraform Infrastructure as Code.
+A production-ready, enterprise-grade data processing pipeline demonstrating professional AWS architecture with Java 21, Spring Boot 3, and Terraform Infrastructure as Code.
 
 ## Architecture Overview
 
@@ -63,13 +63,13 @@ This system implements an **asynchronous file processing pipeline** where:
 
 | Component | Technology | Version |
 |-----------|-----------|---------|
-| Language | Java | 17 |
+| Language | Java | 21 |
 | Framework | Spring Boot | 3.2.1 |
 | IaC | Terraform | ≥ 1.6.0 |
 | Build Tool | Maven | 3.8+ |
 | Database | PostgreSQL | 15.4 |
 | AWS SDK | AWS SDK for Java | 2.21.0 |
-| Runtime | Amazon Corretto | 17 |
+| Runtime | Amazon Corretto | 21 |
 
 ## AWS Services Used
 
@@ -81,7 +81,7 @@ Hosts the Spring Boot REST API with Auto Scaling Group and Application Load Bala
 - **Processed Bucket**: Stores transformed files with encryption at rest
 
 ### Lambda
-Serverless function with **SnapStart** enabled for Java 17, reducing cold start latency by 90%. Processes files asynchronously with automatic scaling.
+Serverless function with **SnapStart** enabled for Java 21, reducing cold start latency by 90%. Processes files asynchronously with automatic scaling.
 
 ### RDS (Relational Database Service)
 PostgreSQL database with **Multi-AZ** deployment and **RDS Proxy** for connection pooling, essential for Lambda's connection management.
@@ -137,7 +137,7 @@ aws-data-pipeline/
 
 - **AWS Account** with appropriate IAM permissions
 - **Terraform** ≥ 1.6.0
-- **Java JDK** 17 or higher
+- **Java JDK** 21 or higher
 - **Maven** 3.8 or higher
 - **AWS CLI** configured with credentials
 
